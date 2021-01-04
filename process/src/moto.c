@@ -1,0 +1,13 @@
+#include "init.h"
+
+unsigned char code smg_1[]= {
+	0x00,0x19,0x32,0x4B,0x64,0x7D,0x96,0xAF,0xC8,0xE1,0xFA
+}
+;
+int Moto_start(unsigned int Gear) {
+	P0 = smg_1[Gear];
+	return 0;
+}
+void Moto_init(void) {
+	P0 = 0x00;
+}
